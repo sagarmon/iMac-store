@@ -1,3 +1,6 @@
+const memorySpan = document.getElementById('memory-span');
+const storageSpan = document.getElementById('storage-span');
+
 // 8GB unified memory function
 document.getElementById('8gb-unified-memory').addEventListener('click', function () {
     // get extra memory cost
@@ -17,6 +20,8 @@ document.getElementById('8gb-unified-memory').addEventListener('click', function
         let grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = totalPriceValueInt - 180;
     }
+
+    memorySpan.innerText = 8;
 
     document.getElementById("8gb-unified-memory").disabled = true;
     document.getElementById("16gb-unified-memory").disabled = false;
@@ -41,6 +46,8 @@ document.getElementById('16gb-unified-memory').addEventListener('click', functio
         let grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = totalPriceValueInt + 180;
     }
+
+    memorySpan.innerText = 16;
 
 
     document.getElementById("16gb-unified-memory").disabled = true;
@@ -69,6 +76,8 @@ document.getElementById('256gb-ssd-storage').addEventListener('click', function 
     if (extraStorageCostValueInt == 180) {
         totalPrice.innerText = totalPriceValueInt - 180;
     }
+
+    storageSpan.innerText = '256GB';
 
     document.getElementById("256gb-ssd-storage").disabled = true;
     document.getElementById("512gb-ssd-storage").disabled = false;
@@ -101,7 +110,7 @@ document.getElementById('512gb-ssd-storage').addEventListener('click', function 
         grandTotal.innerText = totalPriceValueInt - 80;
     }
 
-
+    storageSpan.innerText = '512GB';
 
     document.getElementById("256gb-ssd-storage").disabled = false;
     document.getElementById("512gb-ssd-storage").disabled = true;
@@ -133,6 +142,8 @@ document.getElementById('1tb-ssd-storage').addEventListener('click', function ()
         let grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = totalPriceValueInt + 80;
     }
+
+    storageSpan.innerText = '1TB';
 
     document.getElementById("256gb-ssd-storage").disabled = false;
     document.getElementById("512gb-ssd-storage").disabled = false;
